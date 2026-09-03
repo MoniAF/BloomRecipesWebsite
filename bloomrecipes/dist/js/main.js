@@ -1102,7 +1102,7 @@ const app = Vue.createApp({
                     localStorage.setItem('email', session.user.email);
                     localStorage.setItem('username', session.user.last_name);
 
-                    window.location.href = 'http://bloomrecipes.test/dist/';
+                    window.location.href = './index.html';
                 }
             )
         },
@@ -1129,7 +1129,7 @@ const app = Vue.createApp({
                     localStorage.removeItem('email');
                     localStorage.removeItem('username');
 
-                    window.location.href = 'http://bloomrecipes.test/dist/';
+                    window.location.href = './index.html';
                 }
             )
         },
@@ -1164,7 +1164,7 @@ const app = Vue.createApp({
                     localStorage.setItem('email', session.data.email);
                     localStorage.setItem('username', session.data.last_name);
 
-                    window.location.href = 'http://bloomrecipes.test/dist/';
+                    window.location.href = './index.html';
                 }
             )
         },
@@ -1191,7 +1191,7 @@ const app = Vue.createApp({
         },
 
         redirectToLogin(){ //Redirecciona a la pagina de login
-            window.location.href = 'http://bloomrecipes.test/dist/login.html';
+            window.location.href = './login.html';
         }
             
     }

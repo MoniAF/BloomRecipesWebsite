@@ -316,7 +316,7 @@ app.component('nav-bar',{
                         </ul>
                     </div>
                     <section v-else>
-                        <a href="http://bloomrecipes.test/dist/register.html" class="btn-user d-block text-decoration-none">Sign Up</a>
+                        <a href="./register.html" class="btn-user d-block text-decoration-none">Sign Up</a>
                     </section>
                     <img src="./img/icon-admin.jpg" class="user-icon" alt="icon-admin">
                 </section>
