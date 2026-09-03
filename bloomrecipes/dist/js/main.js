@@ -54,7 +54,7 @@ const app = Vue.createApp({
         //agregar complejidad
         axios({
             method: 'get',
-            url:'http://proyectobloom.test/api/recipes/levels'
+            url:'http://127.0.0.1:8000/api/recipes/levels'
            })
         .then(
             (response) => {
@@ -76,7 +76,7 @@ const app = Vue.createApp({
         //agregar categorías
         axios({
             method: 'get',
-            url:'http://proyectobloom.test/api/recipes/categories'
+            url:'http://127.0.0.1:8000/api/recipes/categories'
            })
         .then(
             (response) => {
@@ -98,7 +98,7 @@ const app = Vue.createApp({
         //agregar ocasiones
         axios({
             method: 'get',
-            url:'http://proyectobloom.test/api/recipes/occasions'
+            url:'http://127.0.0.1:8000/api/recipes/occasions'
            })
         .then(
             (response) => {
@@ -135,7 +135,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/users/savedrecipes/'+this.logid
+                url:'http://127.0.0.1:8000/api/users/savedrecipes/'+this.logid
                 })
             .then(
                 (response) => {
@@ -148,7 +148,7 @@ const app = Vue.createApp({
                         items.forEach(element => {
                             this.savedRecipes.push({ 
                                     id: element.id,
-                                    image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                    image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                     name: element.name,
                                     likes: element.likes,
                                     category: element.category,
@@ -162,7 +162,7 @@ const app = Vue.createApp({
                         //agregar trendings
                         axios({
                             method: 'get',
-                            url:'http://proyectobloom.test/api/recipes/top10'
+                            url:'http://127.0.0.1:8000/api/recipes/top10'
                            })
                         .then(
                             (response) => {
@@ -199,7 +199,7 @@ const app = Vue.createApp({
                 
                                     this.trendings.push({ 
                                             id: element.id,
-                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                             name: element.name,
                                             likes: element.likes,
                                             category: element.category,
@@ -219,7 +219,7 @@ const app = Vue.createApp({
                         //agregar recetas desde el api
                         axios({
                             method: 'get',
-                            url:'http://proyectobloom.test/api/recipes/all'
+                            url:'http://127.0.0.1:8000/api/recipes/all'
                         })
                         .then(
                             (response) => {
@@ -254,7 +254,7 @@ const app = Vue.createApp({
 
                                     this.recipes.push({ 
                                             id: element.id,
-                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                             name: element.name,
                                             likes: element.likes,
                                             category: element.category,
@@ -274,7 +274,7 @@ const app = Vue.createApp({
                         //agregar trendings
                         axios({
                             method: 'get',
-                            url:'http://proyectobloom.test/api/recipes/top10'
+                            url:'http://127.0.0.1:8000/api/recipes/top10'
                            })
                         .then(
                             (response) => {
@@ -311,7 +311,7 @@ const app = Vue.createApp({
                 
                                     this.trendings.push({ 
                                             id: element.id,
-                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                             name: element.name,
                                             likes: element.likes,
                                             category: element.category,
@@ -331,7 +331,7 @@ const app = Vue.createApp({
                         //agregar recetas desde el api
                         axios({
                             method: 'get',
-                            url:'http://proyectobloom.test/api/recipes/all'
+                            url:'http://127.0.0.1:8000/api/recipes/all'
                         })
                         .then(
                             (response) => {
@@ -366,7 +366,7 @@ const app = Vue.createApp({
 
                                     this.recipes.push({ 
                                             id: element.id,
-                                            image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                            image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                             name: element.name,
                                             likes: element.likes,
                                             category: element.category,
@@ -394,7 +394,7 @@ const app = Vue.createApp({
             //agregar trendings
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/top10'
+                url:'http://127.0.0.1:8000/api/recipes/top10'
                })
             .then(
                 (response) => {
@@ -431,7 +431,7 @@ const app = Vue.createApp({
     
                         this.trendings.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -451,7 +451,7 @@ const app = Vue.createApp({
             //agregar recetas desde el api
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/all'
+                url:'http://127.0.0.1:8000/api/recipes/all'
             })
             .then(
                 (response) => {
@@ -486,7 +486,7 @@ const app = Vue.createApp({
     
                         this.recipes.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -508,7 +508,7 @@ const app = Vue.createApp({
         searchRecipes(){ //realiza la busqueda de las recetas y las añade al array de resultados
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/searchbyname/'+this.searchTerm
+                url:'http://127.0.0.1:8000/api/recipes/searchbyname/'+this.searchTerm
                })
             .then(
                 (response) => {
@@ -556,7 +556,7 @@ const app = Vue.createApp({
 
                             this.searchData.push({ 
                                     id: element.id,
-                                    image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                    image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                     name: element.name,
                                     likes: element.likes,
                                     category: element.category,
@@ -613,7 +613,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/levels'
+                url:'http://127.0.0.1:8000/api/recipes/levels'
                })
             .then(
                 (response) => {
@@ -632,7 +632,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/filterby/level/'+level
+                url:'http://127.0.0.1:8000/api/recipes/filterby/level/'+level
                })
             .then(
                 (response) => {
@@ -680,7 +680,7 @@ const app = Vue.createApp({
 
                         this.optionsRecipes.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -701,7 +701,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/occasions'
+                url:'http://127.0.0.1:8000/api/recipes/occasions'
                })
             .then(
                 (response) => {
@@ -720,7 +720,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/filterby/occasion/'+occasion
+                url:'http://127.0.0.1:8000/api/recipes/filterby/occasion/'+occasion
                })
             .then(
                 (response) => {
@@ -769,7 +769,7 @@ const app = Vue.createApp({
 
                         this.optionsRecipes.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -790,7 +790,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/categories'
+                url:'http://127.0.0.1:8000/api/recipes/categories'
                })
             .then(
                 (response) => {
@@ -809,7 +809,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/filterby/category/'+category
+                url:'http://127.0.0.1:8000/api/recipes/filterby/category/'+category
                })
             .then(
                 (response) => {
@@ -858,7 +858,7 @@ const app = Vue.createApp({
 
                         this.optionsRecipes.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -895,7 +895,7 @@ const app = Vue.createApp({
             //console.log("muestra el id" +id);
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/recipes/recipe/'+id
+                url:'http://127.0.0.1:8000/api/recipes/recipe/'+id
                 })
             .then(
                 (response) => {
@@ -935,7 +935,7 @@ const app = Vue.createApp({
 
                     item.forEach(element => {
                         this.recipe.id = id,
-                        this.recipe.image =  "http://proyectobloom.test/storage/imgs/"+ element.image,
+                        this.recipe.image =  "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                         this.recipe.name = element.name,
                         this.recipe.likes = element.likes,
                         this.recipe.category = element.category,
@@ -977,7 +977,7 @@ const app = Vue.createApp({
 
                         this.featuredRecipes.push({ 
                                 id: element.id,
-                                image: "http://proyectobloom.test/storage/imgs/"+ element.image,
+                                image: "http://127.0.0.1:8000/storage/imgs/"+ element.image,
                                 name: element.name,
                                 likes: element.likes,
                                 category: element.category,
@@ -1002,7 +1002,7 @@ const app = Vue.createApp({
             
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/users/likes/' + logid + '/' + idrecipe
+                url:'http://127.0.0.1:8000/api/users/likes/' + logid + '/' + idrecipe
                })
             .then(
                 (response) => {
@@ -1014,7 +1014,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/users/saverecipe/' + logid + '/' + idrecipe
+                url:'http://127.0.0.1:8000/api/users/saverecipe/' + logid + '/' + idrecipe
                })
             .then(
                 (response) => {
@@ -1034,7 +1034,7 @@ const app = Vue.createApp({
             
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/users/dislikes/' + logid + '/' + idrecipe
+                url:'http://127.0.0.1:8000/api/users/dislikes/' + logid + '/' + idrecipe
                })
             .then(
                 (response) => {
@@ -1046,7 +1046,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url:'http://proyectobloom.test/api/users/removesavedrecipe/' + logid + '/' + idrecipe
+                url:'http://127.0.0.1:8000/api/users/removesavedrecipe/' + logid + '/' + idrecipe
                })
             .then(
                 (response) => {
@@ -1085,7 +1085,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'post',
-                url:'http://proyectobloom.test/api/users/login',
+                url:'http://127.0.0.1:8000/api/users/login',
                 data: {
                   email: this.uemail,
                   password: this.upassword
@@ -1113,7 +1113,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'get',
-                url: 'http://proyectobloom.test/api/users/logout',
+                url: 'http://127.0.0.1:8000/api/users/logout',
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -1144,7 +1144,7 @@ const app = Vue.createApp({
 
             axios({
                 method: 'post',
-                url: 'http://proyectobloom.test/api/users/register',
+                url: 'http://127.0.0.1:8000/api/users/register',
                 data: {
                     name: this.name,
                     last_name: this.username,
@@ -1174,7 +1174,7 @@ const app = Vue.createApp({
             //console.log(this.uemail);
             axios({
                 method: 'post',
-                url: 'http://proyectobloom.test/api/users/recoverpassword',
+                url: 'http://127.0.0.1:8000/api/users/recoverpassword',
                 data: {
                     email: this.uemail
                 }
