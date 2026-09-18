@@ -32,7 +32,6 @@ This repository preserves the original version of the project as it was built in
 - User registration and login
 - Save favorite recipes
 - Like and unlike recipes
-- Recover user password
 
 ## Architecture
 
